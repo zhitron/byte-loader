@@ -3,6 +3,7 @@ package com.github.zhitron.byte_loader.impl;
 import com.github.zhitron.byte_loader.ByteLoader;
 
 import java.nio.ByteBuffer;
+import java.util.Objects;
 
 /**
  * ByteLoaderByCharArray 是一个具体的 ByteLoader 实现，用于从 char 数组中加载字节数据。
@@ -29,7 +30,7 @@ public class ByteLoaderByCharArray extends ByteLoader {
      */
     public ByteLoaderByCharArray(char[] input, int bufferSize) {
         super(bufferSize);
-        this.input = input;
+        this.input = Objects.requireNonNull(input);
     }
 
     /**

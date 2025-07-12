@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class ByteLoaderByInputStreamTest {
     @Test
-    public void testHasNextByteValueAndNextByteValue() throws Exception {
+    public void test() throws Exception {
         byte[] data = "Hello from InputStream".getBytes();
         try (ByteLoader loader = ByteLoaderFactory.of(new ByteArrayInputStream(data), 3)) {
             for (byte b : data) {

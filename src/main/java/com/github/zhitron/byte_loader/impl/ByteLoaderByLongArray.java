@@ -3,6 +3,7 @@ package com.github.zhitron.byte_loader.impl;
 import com.github.zhitron.byte_loader.ByteLoader;
 
 import java.nio.ByteBuffer;
+import java.util.Objects;
 
 /**
  * ByteLoaderByLongArray 是一个具体的 ByteLoader 实现，用于从 long 数组中加载字节数据。
@@ -31,7 +32,7 @@ public class ByteLoaderByLongArray extends ByteLoader {
      */
     public ByteLoaderByLongArray(long[] input, int bufferSize) {
         super(bufferSize);
-        this.input = input;
+        this.input = Objects.requireNonNull(input);
     }
 
     /**

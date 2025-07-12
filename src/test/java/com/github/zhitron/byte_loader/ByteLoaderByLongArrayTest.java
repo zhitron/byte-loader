@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class ByteLoaderByLongArrayTest {
     @Test
-    public void testHasNextByteValueAndNextByteValue() throws Exception {
+    public void test() throws Exception {
         long[] data = {0x123456789ABCDEF0L, 0x0FEDCBA987654321L};
         byte[] expected = new byte[]{
                 (byte) 0x12, (byte) 0x34, (byte) 0x56, (byte) 0x78,

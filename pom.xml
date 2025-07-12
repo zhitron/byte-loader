@@ -6,7 +6,7 @@
 
     <groupId>io.github.zhitron</groupId>
     <artifactId>byte-loader</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>Byte Loader</name>
     <description>
         Byte Loader is a lightweight yet well-designed byte loading and processing library, featuring high scalability and flexibility, making it easy to integrate into more

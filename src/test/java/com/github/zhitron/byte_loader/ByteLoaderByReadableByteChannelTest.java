@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class ByteLoaderByReadableByteChannelTest {
     @Test
-    public void testHasNextByteValueAndNextByteValue() throws Exception {
+    public void test() throws Exception {
         byte[] expected = "Hello from ReadableByteChannel".getBytes();
         ReadableByteChannel data = Channels.newChannel(new ByteArrayInputStream(expected));
         try (ByteLoader loader = ByteLoaderFactory.of(data, 3)) {

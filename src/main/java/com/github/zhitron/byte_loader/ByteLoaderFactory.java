@@ -9,6 +9,8 @@ import java.nio.channels.ReadableByteChannel;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 /**
  * ByteLoaderFactory 是一个工厂类，用于创建不同类型的 ByteLoader 实例。
@@ -128,6 +130,48 @@ public final class ByteLoaderFactory {
      */
     public static ByteLoader of(long[] input, int bufferSize) {
         return new ByteLoaderByLongArray(input, bufferSize);
+    }
+
+    /**
+     * 创建一个使用 IntStream 作为输入源的 ByteLoader 实例，默认缓冲区大小为 1024。
+     *
+     * @param input 输入的 IntStream 流
+     * @return 返回一个新的 ByteLoader 实例
+     */
+    public static ByteLoader of(IntStream input) {
+        return new ByteLoaderByIntStream(input, 1024);
+    }
+
+    /**
+     * 创建一个使用 IntStream 作为输入源的 ByteLoader 实例，指定缓冲区大小。
+     *
+     * @param input      输入的 IntStream 流
+     * @param bufferSize 缓冲区大小
+     * @return 返回一个新的 ByteLoader 实例
+     */
+    public static ByteLoader of(IntStream input, int bufferSize) {
+        return new ByteLoaderByIntStream(input, bufferSize);
+    }
+
+    /**
+     * 创建一个使用 LongStream 作为输入源的 ByteLoader 实例，默认缓冲区大小为 1024。
+     *
+     * @param input 输入的 LongStream 流
+     * @return 返回一个新的 ByteLoader 实例
+     */
+    public static ByteLoader of(LongStream input) {
+        return new ByteLoaderByLongStream(input, 1024);
+    }
+
+    /**
+     * 创建一个使用 LongStream 作为输入源的 ByteLoader 实例，指定缓冲区大小。
+     *
+     * @param input      输入的 LongStream 流
+     * @param bufferSize 缓冲区大小
+     * @return 返回一个新的 ByteLoader 实例
+     */
+    public static ByteLoader of(LongStream input, int bufferSize) {
+        return new ByteLoaderByLongStream(input, bufferSize);
     }
 
     /**
