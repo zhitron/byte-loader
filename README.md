@@ -21,7 +21,7 @@
 <dependency>
     <groupId>com.github.zhitron</groupId>
     <artifactId>byte-loader</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -100,7 +100,7 @@ public class ByteLoaderTest {
 
 ## 📦 发布状态
 
-当前版本：`1.0.0`
+当前版本：`1.1.0`
 
 该项目已发布至 [Maven Central](https://search.maven.org/)，支持快照版本与正式版本部署。
 
