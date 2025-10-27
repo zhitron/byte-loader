@@ -132,5 +132,3 @@ Apache License, Version 2.0
 详见 [LICENSE](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 ---
-
-如果你有具体的代码结构或功能说明，可以提供更多细节，我可以帮你进一步补充文档内容。
